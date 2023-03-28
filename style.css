@@ -1,0 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth; /* свойство scroll-behavior не наследуется, применяется к прокручиваемым блокам */
+}
+.header-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background-color: #545e68 !important;
+  padding-left: 1%;
+}
+.video-container {
+  display: flex;
+  width: 50%;
+  justify-content: end;
+  align-items: flex-end;
+}
+.content-contaniner {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  flex-direction: column;
+  transition: all 0.4s;
+}
+#myVideo {
+  z-index: 1;
+  min-width: 100%;
+  min-height: 80%;
+  filter: brightness(80%);
+  transition: all 0.4s;
+}
+
+#myBtn {
+  z-index: 2;
+  position: absolute;
+  margin: 1%;
+  width: 80px;
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.641);
+  cursor: default;
+  outline: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow";
+  font-weight: 100;
+  transition: all 0.4s;
+}
+
+#myBtn:hover {
+  filter: invert(100%);
+}
+.title {
+  padding-top: 25%;
+
+  font-size: 300%;
+  color: #fff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 900;
+}
+.description {
+  text-align: justify;
+  width: 80%;
+  margin-top: 2%;
+  color: #fff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow";
+  font-weight: 200;
+}
+.rules-container {
+  display: flex;
+  background-color: #3c4650;
+  justify-content: center;
+  align-items: center;
+}
+
+.rules-description {
+  color: #fff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow";
+  font-weight: 100;
+  text-align: justify;
+  padding: 0% 5% 5% 5%;
+}
+.rules-title {
+  padding-top: 6%;
+  padding-left: 10%;
+  align-self: start;
+  font-size: xx-large;
+  color: #fff;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 900;
+}
+.game-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  background-color: #313a42;
+  padding-top: 3%;
+}
+.board-area-container {
+  padding-top: 3%;
+  background-color: #313a42;
+  margin: -1%;
+}
+.rule-description-container {
+  width: 50%;
+}
+.img-rule {
+  width: 50%;
+}
+.rule-image {
+  width: 95%;
+  padding: 5%;
+  transition: all 0.4s;
+}
+
+@media only screen and (max-width: 700px) {
+  .board-area-container {
+    margin: -2%;
+  }
+  .game-container {
+    flex-direction: row;
+  }
+  .header-container {
+    flex-direction: column;
+  }
+  .video-container {
+    padding-top: 15%;
+    width: 100%;
+  }
+  .content-contaniner {
+    width: 100%;
+  }
+  .title {
+    padding-top: 10%;
+
+    font-size: 300%;
+  }
+  .rules-container {
+    display: flex;
+
+    flex-direction: column;
+  }
+  .rule-description-container {
+    width: 80%;
+    padding-top: 5%;
+  }
+  .img-rule {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .rules-description {
+    text-align: justify;
+    padding: 0%;
+  }
+  .rule-image {
+    width: 90%;
+    margin: 0px auto;
+  }
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+}
